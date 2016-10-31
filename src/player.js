@@ -18,18 +18,24 @@ workshop text. But we hope you try it yourself first. :-)
 function play(node) {
 
   // Base case
-  if (/*Some truthy expression*/) {
-    // Your code here
+  if (node.connections.length === 0) {
+    console.log(node.text);
+
 
     return Promise.resolve() // Don't worry about this, we will look more into Promise later on
   }
 
+  //console.log(node);
   // Recursive case
-  return inquirer.prompt([{/*Inquirer question object*/}])
+  return inquirer.prompt([{
+    type: 'list',
+    name: 'node',
+    message: node.text,
+    choices: node.connections
+  }])
   .then(function (answer) {
-    // What is in the answer we are returned that we can use? Try logging it out!
-    // How can we use this value to continue the game? Write your code below
-
+    //console.log(answer);  
+     return play(answer.node);
   })
 }
 
