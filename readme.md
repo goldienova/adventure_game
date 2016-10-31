@@ -44,7 +44,7 @@ Refer to the test specs in the `test` folder, as well as our description of the 
 
 Once you pass all the specs, the `Game` class is properly built, but it has not yet been "plugged in" to work with a command line interface (CLI). There is one more file to complete: `src/player.js`.
 
-The job of this file is to pull in `example/example.game.js` and tie it together with the [`inquirer`](https://www.npmjs.com/package/inquirer) library, launching an actual game which a user can interact with in the command line. There are no specs for this final part; you will know everything is working when `npm start` launches the command-line choose-your-own-adventure example game.
+The job of this file is to pull in `example/example.game.js` and tie it together with the [`inquirer`](https://github.com/sboudrias/Inquirer.js) library, launching an actual game which a user can interact with in the command line. There are no specs for this final part; you will know everything is working when `npm start` launches the command-line choose-your-own-adventure example game.
 
 ## Components
 
